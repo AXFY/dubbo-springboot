@@ -1,0 +1,22 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /
+dubbo:
+  application:
+    name:
+      dubbo-spring-provider-demo
+  registry:
+            address: zookeeper://localhost:2181
+  protocol:
+            name: dubbo
+            port: 20880
+spring:
+        datasource:
+           url: jdbc:mysql://172.19.68.238:3306/test?characterEncoding=utf-
+           username: root
+           password: pactera
+           driver-class-name: com.mysql.jdbc.Driver
+        jpa:
+           hibernate:
+             ddl-auto: update
